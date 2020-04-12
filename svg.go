@@ -237,7 +237,7 @@ func (svg *SVG) DefEnd() { svg.println(`</defs>`) }
 // Marker defines a marker
 // Standard reference: http://www.w3.org/TR/SVG11/painting.html#MarkerElement
 func (svg *SVG) Marker(id string, x, y, width, height int, s ...string) {
-	svg.printf(`<marker id="%s" refX="%d" refY="%d" markerWidth="%d" markerHeight="%d" %s`,
+	svg.printf(`<marker id="%s" refX="%d" refY="%d" orient="auto" markerWidth="%d" markerHeight="%d" %s`,
 		id, x, y, width, height, endstyle(s, ">\n"))
 }
 
